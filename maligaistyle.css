@@ -11,14 +11,25 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-  
+ 
     font-weight: bold;
     font-size: large;
     
 }
 body{
-    font-family: 'Lemonada', cursive;
+    font-family: 'Lemonada', cursive;   
 }
+#button {
+    background-color:  rgb(68, 192, 68);
+    border: none;
+    color: white;
+   }
+  #button:hover{
+       color: #ffffff;
+       background-color: blue;
+       border:none;
+   }
+   
 h1{
     font-size: 50px;
     line-height: 64px;
@@ -102,22 +113,22 @@ p{
 
 
 .navbar li{
-    /* background-color: rgb(255, 255, 255); */
+    
     position: relative;
     list-style: none;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 .navbar li a {
     
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
     transition: 0.3 ease;
 }
 .navbar li a i{
     color: green;
-    font-size: 60px;
+    font-size: 30px;
 }
 
 
@@ -136,10 +147,13 @@ p{
     bottom: -4px;
     left: 20px;
 }
-#mobile{
+.navbar li a i:hover{
+    cursor: pointer;
+}
+/* #mobile{
     display: none;
     align-items: center;
-}
+} */
 
 
 /* ----------------------------------------------hero image-----------------------------------------------------*/
@@ -156,21 +170,24 @@ p{
     align-items: flex-start;
     justify-content: center;
 }
-#hero button:hover{
-    color: greenyellow;
-}
+
 
 #hero h4{
     text-align: center;
-    font-size:6vw;
+    font-size:5vw;
     font-weight: 200;
- 
-   
     padding: 10px 40px;
     margin-top: -30px;
     margin-bottom: 10px;
-    background: linear-gradient( left blue,green);
 
+  
+    font-family: 'Finger Paint', cursive;
+    background-color: rgba(18, 177, 18, 0.677);
+    border-radius: 5cm;
+    justify-content: center;
+    /* margin-bottom: 50px; */
+    /* margin-left:15%; */
+    color:yellow;
 
     
 }
@@ -178,46 +195,36 @@ p{
 
     color: rgba(255, 255, 255, 0.589);
 }
-#hero h4{
-    text-align: center;
-    font-size: 70px;
-    width: 30cm;
-    font-family: 'Finger Paint', cursive;
-    background-color: rgba(18, 177, 18, 0.677);
-    border-radius: 5cm;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-left:15%;
-    color:yellow;
-}
+
 #hero h2{
     color: yellow;
 }
 #hero p{
     /* margin-left: -2cm; */
     text-align: center;
-    width: 20cm;
+    width: 12cm;
     font-size: 25px;
     color:yellow;
     background-color: rgba(255, 0, 0, 0.593);
     border-radius: 5cm;
 }
-#hero button{
-    background-image: url(image/frame.jpg);
+/*#hero button{
+     background-image: url(image/frame.jpg);
     background-size: cover;
     background-position: center;
     background-color: transparent;
     box-shadow: blue;
     color: whitesmoke;
     border: lawngreen;
-    /* margin-left: 20cm; */
-    border-radius: 2cm;
+     border-radius: 2cm;
     padding: 14px 80px 14px 65px;
     background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700;
-    font-size: 50px;
-}
+    font-size: 50px;} */
+
+
+
 /* --------------------------------------------------------------------------------------------------------- */
 #feature{
     display: flex;
@@ -386,7 +393,7 @@ p{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-width: 700px;
+    /* min-width: 700px; */
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -408,7 +415,7 @@ p{
 .banner-box1 h2,.banner-box2 h2{
     color: greenyellow;
     font-size: 50px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 .banner-box1 p,.banner-box2 p{
     color: lightgreen;
@@ -493,11 +500,7 @@ p{
     color: #ffffff;
     background-color: blue;
 }
-.icon i{
-    font-size: 40px;
-    justify-content: space-between;
-    color: blue;
-}
+
 
 
 
@@ -505,56 +508,71 @@ p{
 
 
 footer{
- 
-    display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     
-    /* background-image: url(/image/farmers/L3.jpg); */
-    background-size: cover;
 }
- footer .section-p1{
-    padding: 20px 60px;
-    justify-content: space-between;
-} 
-.col-one,.col-two,.col-three,.col-install.copyright{
-    margin-left: 20px;
+footer .column{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+footer .logo{
+    margin-bottom: 30px;
 }
-
-footer .col strong,p{
-    color: #222;
-}
-
-.col h2,h3{
-    font-size: 30px;
-
-}
-footer h3{
-font-size: 30px;
-text-align: start;
+footer h4{
+    font-size: 18px;
+    padding-bottom: 20px;
 }
 footer p{
-    font-size: 20px;
-    margin: 0 0 15px 0;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+footer a {
+    font-size: 16px;
+    color: #222;
+    text-decoration: none;
+    margin: 0 0 8px 0;
+}
+/* ============================ */
+footer .install .row img{
+    border: 5px solid #6600ff;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .icon i{
+    font-size: 40px;
+    justify-content: space-between;
+    color: green;
+}
+
+  footer .icon :hover,
+  footer a:hover{
+    color: blue;
+    cursor: pointer;
+  }
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    #Navsection{
+        display: flex;
+        /* width: 100%; */
+    }
+    .navbar{
+        display: none;
+        width: auto;
     }
     
-footer a{
-    font-size: 20px;
-    text-decoration: none;
-    color: #222;
- }
-
-.col install{
-    padding: 50px 50px;
-    margin-left: 20px;
-}
-.copyright p{
-    padding: 50px 50px;
-    /* justify-content: center; */
-    /* text-align: center; */
-
 }
 
 
-
-
-@media (max-weight:719px) {
-}
